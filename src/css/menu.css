@@ -1,0 +1,152 @@
+#menu-container {
+    position: absolute;
+    right: 0;
+    width: calc(300px + calc((100vw - 90rem) / 2));
+    height: 100%;
+    background: white;
+    z-index: 2;
+    max-width: 45vw;
+    box-sizing: border-box;
+    padding: 50px 50px 70px 50px;
+}
+
+#menu-content-container {
+    position: relative;
+    height: 100%;
+    width: 240px;
+}
+
+#menu-items-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-items-column-container {
+    width: 100%;
+}
+
+.menu-item {
+    border-radius: 15px;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: fit-content;
+    color: #091434;
+    cursor: pointer;
+}
+
+.active-menu-item {
+    position: relative;
+}
+
+.active-menu-item {
+    cursor: unset !important;
+    transform: translateX(28px);
+}
+
+.active-menu-item::after {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    display: flex;
+    border-radius: 50%;
+    content: "";
+    color: white;
+    background: #FF923E;
+    left: -10px;
+    top: 50%;
+    transform: translate(-16px, -50%);
+}
+
+#menu-container .social-icon {
+    margin-right: 15px;
+}
+
+#music-credit-container {
+    margin-bottom: 10px;
+}
+
+/**Music Credit Container*/
+ #music-credit-container a, #music-credit-container span {
+    font-size: .9rem;
+    color: #7C8594;
+}
+
+#music-credit-container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-aspect-ratio: 12/10) {
+    #menu-container {
+        right: -100%;
+        width: 100% !important;
+        max-width: unset;
+        align-items: center;
+    }
+
+    .menu-items-column-container {
+        align-items: center;
+    }
+
+    #menu-social-container {
+        justify-content: center;
+    }
+
+     #music-credit-container  {
+        justify-content: center;
+    }
+
+    .active-menu-item::after {
+        position: absolute;
+        height: 3px;
+        margin: 0 auto;
+        content: '';
+        background: #FF923E;
+        width: 100%;
+        bottom: -2px;
+        left: 0;
+        transform: translateY(16px);
+        border-radius: 0px;
+    }
+
+    .active-menu-item {
+        transform: unset;
+    }
+}
+
+/**Decrease Menu in height*/
+@media(max-height: 600px) {
+    .menu-item {
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+    #menu-container .social-icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    #menu-container hr {
+        margin: 15px 0;
+    }
+
+    #music-credit-container a, #music-credit-container span {
+        font-size: 12px;
+    }
+
+    .menu-items-column-container {
+        justify-content: center;
+    }
+}
+
+@media(max-height: 450px) {
+    #menu-items-container {
+        flex-direction: row;
+    }
+
+    #menu-container {
+        padding: 30px 30px 45px 30px;
+    }
+}

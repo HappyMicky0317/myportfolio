@@ -1,0 +1,8 @@
+#intro-container {
+    z-index: 998;
+    background: #F5EFE6;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    cursor: wait;
+}

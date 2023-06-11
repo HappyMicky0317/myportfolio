@@ -1,0 +1,31 @@
+footer {
+    margin-bottom: 20px;
+}
+
+footer span,
+footer a {
+    font-size: 0.9rem;
+    color: #7C8594;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#legal-container {
+    margin-left: 40px;
+}
+
+#legal-container :first-child {
+    margin-right: 40px;
+}
+
+@media(max-width: 420px) {
+    footer {
+        flex-direction: column !important;
+    }
+
+    #legal-container {
+        margin-left: 0;
+    }
+}

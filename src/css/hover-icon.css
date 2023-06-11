@@ -1,0 +1,35 @@
+#hover-icon {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 200ms, width 200ms, border-color 200ms, border-width 200ms;
+    opacity: 0;
+}
+
+.clickCTA::after {
+    content: "Click to enable\Asounds.";
+    line-height: 17px;
+    white-space: pre-wrap;
+    text-align: center;
+    min-width: 200px;
+    position: relative;
+    top: 50px;
+    color: #7C8594;
+}
+
+.hover-spread {
+    height: 16px;
+    min-width: 16px;
+    background: #FF923E;
+    position: absolute;
+    opacity: 0.1;
+    border-radius: 50%;
+}

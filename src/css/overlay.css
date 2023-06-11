@@ -1,0 +1,163 @@
+/****************************Overlay**************************/
+#overlay-container {
+    position: absolute;
+    height: calc(100% - 30px);
+    padding: 15px 0;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#header-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: 250ms;
+    padding-top: 15px;
+    pointer-events: none;
+}
+
+.overlay-button {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/*Header Logo*/
+#header-logo-svg {
+    position: absolute;
+    transform-origin: center center;
+}
+
+#logo-dark-background {
+    background: #091434;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 15px;
+    clip-path: url(#logo-clip-path);
+}
+
+#logo-white-background {
+    background: white;
+    width: 200px;
+}
+
+#logo-click-container {
+    height: 53px;
+    width: 49px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    transform-origin: top left;
+}
+
+/**Sound button*/
+#sound-button {
+    right: 62px;
+}
+
+#header-sound-svg {
+    height: 48px;
+    width: 48px;
+    transform: translateX(12px) scale(1.2);
+}
+
+#sound-button-scale-container {
+    transform-origin: top right;
+    position: relative;
+}
+
+/**Menu Button*/
+#menu-button {
+    right: 0;
+}
+
+.menu-button-bar {
+    width: 26px;
+    height: 4px;
+    background: white;
+    margin: 2.5px;
+    border-radius: 2px;
+}
+
+#menu-button-scale-container {
+    transform-origin: top right;
+}
+
+/**Scroll Icon*/
+.scroll-container {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-border-container {
+    width: 24px;
+    height: 38px;
+    border: 3px solid #091434;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-wheel {
+    background: #091434;
+    width: 4px;
+    height: 11px;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.scroll-touch-icon {
+    height: 38px;
+    width: 38px;
+}
+
+/*------------------------------------------ Responsive -----------------------------*/
+/**Scale down buttons*/
+@media (max-width: 800px),
+(max-height: 800px) {
+
+
+    #scroll-icon,
+    #menu-button-scale-container,
+    #sound-button-scale-container,
+    .scroll-container,
+    #logo-clip-path,
+    #logo-click-container {
+        transform: scale(0.9);
+    }
+
+    #sound-button {
+        right: 64px;
+    }
+}
+
+@media (max-width: 550px),
+(max-height: 550px) {
+
+    #scroll-icon,
+    #menu-button-scale-container,
+    #sound-button-scale-container,
+    .scroll-container,
+    #logo-clip-path,
+    #logo-click-container {
+        transform: scale(0.8);
+    }
+
+    #sound-button {
+        right: 60px;
+    }
+}

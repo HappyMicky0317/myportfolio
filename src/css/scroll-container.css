@@ -1,0 +1,17 @@
+#scroll-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.scroll-container-transitions {
+    transition: left .9s cubic-bezier(0.645, 0.045, 0.355, 1.000), top 700ms cubic-bezier(.6, 0, .4, 1)
+}
+
+#hover-icon-color-switch {
+    position: absolute;
+    width: 300%;
+    height: 50%;
+    top: 0;
+}
