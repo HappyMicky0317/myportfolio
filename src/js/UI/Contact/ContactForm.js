@@ -69,12 +69,13 @@ export default class ContactForm {
 
     addSubmitButtonEventListener() {
         this.domElements.submitButton.addEventListener('click', () => {
-            this.sounds.play('buttonClick')
+            // this.sounds.play('buttonClick')
 
-            this.hideAllErrors()
+            // this.hideAllErrors()
 
-            //Start form validation
-            this.checkNameInput()
+            // //Start form validation
+            // this.checkNameInput()
+            
         })
     }
 
